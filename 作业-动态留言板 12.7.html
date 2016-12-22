@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- SEO  （搜索引擎优化：使浏览器快速搜索进入我们的网页）-->
+    
+    <meta name="keywords" content="" /><!--关键字-->
+    
+    <meta name="description" content="" /><!--详细信息、描述-->
+   
+    <meta name="author" content="" /> <!--作者-->
+    <!-- 苹果专用 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+    <meta name="format-detection" content="telephone=no" /> <!--取消识别电话号码的功能-->
+    <!-- 简单移动端适配 -->
+   	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 图标 -->
+	<link rel="shortcut icon" href="">
+    
+    <title>作业</title>
+    <script src="js/jquery-2.1.0.js"></script>
+    
+    <style>
+   		*{
+   			box-sizing: border-box;
+    		margin: 0px;
+    		padding: 0px;
+    		font: 12px/1.5;
+    	}
+    	html,body,#box{
+    		width: 100%;
+    		height: 100%;
+    		margin: 0px;
+    		padding: 0px;
+			border: 0px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+    	}
+    	
+	    header{
+	        width: 100%;
+	        height: 45px;
+	        position: fixed;
+	        top:0px;
+	        left:0px;
+	        background-color: #0c3c73;	
+	        color: #fff;
+	        font-size: 26px;
+	        font-weight: bold;
+	        line-height: 45px;
+	        text-align: center;
+	      }
+	      
+	      #container{
+	      	 width: 100%;
+	         position: absolute;
+	    	 top:45px;
+	    	 bottom: 50px;
+	    	 left: 0px;
+	         display: flex;
+	         flex-wrap:wrap;
+	         align-items: flex-start;
+	         align-content: flex-start;
+	         background-color: #efefef;
+	         justify-content: space-around;
+	      }
+	      #dv1{
+	      	width: 100%;
+	      	height: 38px;
+	      	border: 1px solid #000000;
+	      	background-color: #444;
+	      	margin: 0px;
+	      	padding: 0px;
+	      	list-style: none;
+	      	display: flex;
+	        flex-wrap: wrap;
+	        align-items: center;
+	        justify-content: space-around;
+	      }
+	      #dv1 li{
+	      	 width: 25%;
+	      	 height: 28px;
+	      	 border-radius: 8px;
+	      	 background-color: #252525;
+	      	 line-height: 28px;
+	      	 text-align: center;
+	      	 color: #fff;
+	      	 font-weight: bold;
+	      	 font-size: 15px;
+	      }
+	      /*#dv1 li :first-child{
+	      	color: #34bcef;
+	      }*/
+	      #dv2_box{
+	      	width: 100%;
+	      }
+	       #dv2_box>div{
+	      	display: none;
+	      }
+	      
+	       /*#dv2_box div:first-child{
+	      	display: block;
+	      }*/
+	      
+	      /*第一页*/
+	      #suo_box{
+	      	width: 100%;
+	      	height: 38px;
+	      	border: 1px solid #000;
+	      	line-height: 35px;
+	      	text-align: center;
+	      	background-color: #999999;
+	      }
+	      #i_sou{
+	      	width: 98%;
+	      	height: 24px;
+	      	border: 1px solid #000;
+	      	border-radius: 8px;
+	      	padding-left: 8px;
+	      }
+	      #liuyan_box{
+	      	width: 100%;
+	      	border: 1px solid silver;
+	      	min-height: 55px;
+	      	line-height: 55px;
+	      	text-align: left;
+	      	background-color: #fff;
+	      }
+	      
+	      #s1{
+	      	color: #000;
+	      	font-weight: bold;
+	      	font-size: 20px;
+	      	margin-left: 20px;
+	      }
+	      #a1{
+	      	color: #0000ef;
+	      	font-weight: bold;
+	      	font-size: 20px;
+	      	text-decoration: underline;
+	      	
+	      }
+	      /*------留言条----*/
+	     #liu_uu{
+	     	width: 100%;
+	      	border: 1px solid silver;
+	      	min-height: 55px;
+	      	line-height: 55px;
+	      	text-align: left;
+	      	
+	     }
+	     .liu_li{
+	     	padding-left: 20px;
+	     	padding-right: 10px;
+	     	height: 55px;
+	     	text-align: left;
+	     	list-style: none;
+	     	margin-bottom:3px;
+	     	background-color: #fff;
+	     	
+	     }
+	     .liu_xuan{
+	     	float: left;
+	     	display: inline-block;
+	     	margin-top: 20px;
+	     	margin-right: 10px;
+	     }
+	     .liu_con{
+	     	display: inline-block;
+	     	height: 55px;
+	     }
+	     .liu_p{
+	     	margin-top: 10px;
+	     	margin-bottom: 5px;
+	     }
+	     .liu_time{
+	     	margin-left: 15px;
+	     	color: silver;
+	     	font-size: 12px;
+	     }
+	     .liu_del{
+	     	float: right;
+	     	display: inline-block;
+	     	background-color: #de460b;
+	     	color: #fff;
+	     	font-weight: bold;
+	     	line-height: 32px;
+	     	height: 32px;
+	     	text-align: center;
+	     	width: 20%;
+	     	border-radius: 5px;
+	     	text-decoration: none;
+	     	margin-top: 10px;
+	     }
+	     
+	     
+	      /*第二页*/
+	     #dv2_2,#dv2_3{
+	     	width: 90%;
+	     	margin: 0px auto;
+	     }
+	     p{
+	     	width: 100%;
+	     	text-align: left;
+	     	color: #000;
+	     	font-weight: bold;
+	     	font-size: 18px;
+	     	margin-top: 15px;
+	     	height: 25px;
+	     	line-height: 25px;
+	     }
+	     #area{
+	     	width: 100%;
+	     	height: 80px;
+	     	margin-bottom: 20px;
+	     	border: 1px solid silver;
+	     	outline: none;
+	     }
+	     #dv2_2 input,#dv2_3 input{
+	     	width: 100%;
+	     	border: 1px solid silver;
+	     	outline: none;
+	     	color: #000;
+	     	font-size: 14px;
+	     }
+	     #i_date{
+	     	height: 36px;
+	     	font-size: 16px;
+	     	border: 1px solid silver;
+	     	outline: none;
+	     }
+	     .btn{
+	     	border-radius: 5px;
+	     	margin-top: 20px;
+	     	background-color: #489d2b;
+	     	color: #fff;
+	     	font-weight: bold;
+	     	font-size: 16px;
+	     	height: 38px;
+	     	outline: none;
+	     	border: 0px;
+	     	
+	     }
+	     #i_name{
+	     	height: 33px;
+	     }
+	     
+	     select{
+	     	width: 100%;
+	     	height: 33px;
+	     	border: 1px solid silver;
+	     	outline: none;
+	     }
+	     option{
+	     	width: 300px;
+	     	height: 33px;
+	     }
+	      footer{
+	      	 width: 100%;
+	         height: 50px;
+	         position: fixed;
+	         bottom:0px;
+	         left:0px;
+	      }
+	      /*-----提示框----*/
+	     .tiShi_box{
+	     	width: 100%;
+	     	height: 100%;
+	     	border-radius: 10px;
+	     	position: absolute;
+	     	left:0px;
+	     	top:0px;
+	     	z-index: 9;
+	     	background-color: #333;
+	     	opacity: 0.9;
+	     	text-align: center;
+	     	
+	     }
+	     .tiShi_p{
+	     	margin:100px 80px;
+	     	color: #fff;
+	     }
+	     .tiShi_btn{
+	     	margin-top: -30px;
+	     	padding: 10px 50px;
+	     	background-color:#0c3c73;
+	     	color: #fff;
+	     	font-size: 20px;
+	     	border-radius: 10px;
+	     	border: 0px;
+	     }
+	     
+ 
+    	@media only screen and (min-width: 414px) {
+    		#box{
+	    		width:414px;
+	    		max-width: 414px;
+	    		margin:auto;
+	    	}
+    	}
+    </style>
+</head>
+
+<body>
+    <section id="box">
+    	
+    	<header id="top">
+    		My Tasks
+    	</header>
+    	<section id="container">
+    		<!--第一部分-->
+    		<ul id="dv1">
+    			<li style="color: #34bcef;">Task List</li>
+    			<li>Add Task</li>
+    			<li>Settings</li>
+    		</ul>
+    		<!--第二部分-->
+    		<!--第一页-->
+    		<div id="dv2_box">
+    			
+    			<div id="dv2_1" style="display: block;">
+    				
+    				<div id="suo_box">
+    					<input id="i_sou" type="text" placeholder="Search tasks..."/>
+    				</div>
+    				<!--留言板内容-->
+    				<div id="liuyan_box"></div>
+    				
+    				
+    			</div>
+    			<!--第二页-->
+    			<div id="dv2_2">
+    				<p id="p1">Task Description</p>
+    				<textarea id="area"></textarea>
+    				
+    				<p id="p2">
+    					Due Date(MM/DD/YY)
+    				</p>
+    				<input type="date"  id="i_date"/>
+    				<input type="button" class="btn" id="add_btn" value="Add Task" />
+    			</div>
+    			<!--第三页-->
+    			<div id="dv2_3">
+    				<p >Your Name</p>
+    				<input id="i_name"></input>
+    				
+    				<p >
+    					Color Scheme
+    				</p>
+    				<select id="sel">
+    					<option>Blue</option>
+    					<option>Yellow</option>
+    					<option>Pink</option>
+    				</select>
+    				<input type="button" class="btn" id="change" value="Save Setting" />
+    				<input type="button" class="btn" id="del" value="Rest All Data" style="margin-top:8px;background-color:#c23e0b;" />
+    			</div>
+    			
+    		</div>
+    		
+    		
+    		
+    		
+    	</section>
+    	<footer></footer>
+    	
+    	
+    	
+    </section>
+
+    <script  type="text/javascript">
+    
+       //选项卡的点击事件---------------------------------------
+    	$("#dv1 li").click(function(){
+    		
+    		//先清除
+    		$("#dv1 li").css("color","#fff");
+    		$("#dv2_box>div").css("display","none");
+    		
+    		//再变化：1变颜色    2.变可见
+    		$(this).css("color","#34bcef");
+    		var index=$(this).index();
+    		
+    		$("#dv2_box>div:eq("+index+")").css("display","block");
+    		
+    		
+    	});
+    	
+    	//清除按钮的点击事件---------------------------------------
+    	$("#del").click(function(){
+    		localStorage.removeItem("liuyan");
+    		$(this).css("color","palevioletred");
+    	});
+    	
+    	//改变颜色及内容按钮-----------------------------------------
+    	$("#change").click(function(){
+    		if($("#i_name").val()){
+    		   $("header").html($("#i_name").val()).css("font-size","18px");
+    		}
+    		$("header").css("background-color",$('#sel').val());
+
+    		
+    		
+    	});
+    	
+    	
+    	//发布消息的点击事件--------------------------------------------
+    	$("#add_btn").click(function(){  
+
+    		if($("#area").val()&&$("#i_date").val()){
+    			
+    			//1.创建留言条对象-------localStorage中储存的内容变成----一个对象数组
+    			var liu_ob={};
+    			liu_ob.con=$("#area").val();
+    			liu_ob.time=$("#i_date").val();
+    			console.log(liu_ob);
+    			
+    			//2.将对象存入本地--------判断本地存储是否有内容
+    			if(localStorage.getItem("liuyan")){
+    				//从本地获取
+    				var tmpArray = localStorage.getItem("liuyan");
+    				//将字符串转换
+    				tmpArray = eval("("+tmpArray+")");
+    				//存入对象
+    				tmpArray.push(liu_ob);
+    				//js代码转化为字符串  存入本地
+    				tmpArray = JSON.stringify(tmpArray);
+    				localStorage.setItem("liuyan",tmpArray);
+    				
+    			}else{
+ 
+    				//创建数组
+    				var tmpArray=[];
+    				tmpArray.push(liu_ob);
+    				//转化为字符串存入本地
+    				tmpArray = JSON.stringify(tmpArray)
+    				localStorage.setItem("liuyan",tmpArray);
+    				
+    			}
+    			
+    			//3.清空内容
+    			
+    			$("#area").val("");
+    			$("#i_date").val("");
+    			
+    			//4.从本地存储中取出内容--------进行编辑
+    			var tmpArray=localStorage.getItem("liuyan");
+    			tmpArray= eval("("+tmpArray+")");
+    			console.log(tmpArray);
+    			
+	    	    $(".liu_uu").remove();
+    			//判断本地存储中是否含有内容
+    			if(tmpArray && tmpArray.length>0){
+    				
+    				$(tmpArray).each(function(i,ob){
+    				
+	    				var that=this;
+	    				//1>清空初始化内容
+	    				$("#s1").remove("");
+		    			
+		    			//2>创建留言列表
+		    			var liu_uu="<ul class='liu_uu'></ul>";
+		    			$("#liuyan_box").append(liu_uu);
+		    			
+		    			//创建留言条
+		    			var liu_li="<li class='liu_li'></li>"
+		    			$(".liu_uu:last").append(liu_li);
+		    			
+		    			//创建勾选框
+		    			var liu_xuan="<input type='checkbox' class='liu_xuan'/>";
+		    			$(".liu_li:last").append(liu_xuan);
+		    			
+		    			//创建留言内容盒子
+		    			var liu_con="<span class='liu_con'></span>";
+		    			$(".liu_li:last").append(liu_con);
+		    			//创建留言内容
+		    			var liu_p="<span class='liu_p'>"+this.con+"</span>";
+		    			$(".liu_con:last").append(liu_p);
+		    			
+		    			//创建留言时间
+		    			var liu_time="<span class='liu_time'>"+this.time+"</span>";
+		    			$(".liu_con:last").append(liu_time);
+		    			
+		    			//创建 删除键
+		    			var liu_del="<a href='#' class='liu_del'>Delete</a>";
+		    			$(".liu_li:last").append(liu_del);
+		    			
+		    			
+    				
+    					});
+    				
+    			}else{
+    			    var s1="<span id='s1'>No task to display.<a id='a1' herf='#'>Add one </a>?</span>"
+    			    $("#liuyan_box").append(s1);
+    			
+    			}
+    			
+		    	$(this).css("color","gold");
+	    	}else{
+		    	  
+		      
+               var tiShi_box="<div class='tiShi_box'></div>";
+               $("#dv2_2").append(tiShi_box);
+               
+               var tiShi_p="<p class='tiShi_p'>您的信未填完善，请继续填写</p>";
+               $(".tiShi_box:last").append(tiShi_p);
+               
+               var tiShi_btn="<button class='tiShi_btn'>确定</button>"
+                $(".tiShi_box:last").append(tiShi_btn);
+               
+               
+               $(".tiShi_btn").click(function(){
+               		 $(".tiShi_box").css("display","none");
+               });
+		    		
+		    }
+	    	
+	   
+    	});//点击事件结束
+    	
+    	//3.从本地存储中取出内容--------进行编辑
+    			var tmpArray=localStorage.getItem("liuyan");
+    			tmpArray= eval("("+tmpArray+")");
+    			
+    			//判断本地存储中是否含有内容
+    			if(tmpArray && tmpArray.length>0){
+    				
+    				$(tmpArray).each(function(i,ob){
+    				
+	    				var that=this;
+	    				//1>清空初始化内容
+	    				$("#s1").remove("");
+	    			
+		    			
+		    			//2>创建留言列表
+		    			var liu_uu="<ul class='liu_uu'></ul>";
+		    			$("#liuyan_box").append(liu_uu);
+		    			
+		    			//创建留言条
+		    			var liu_li="<li class='liu_li' idx='"+i+"'></li>"
+		    			$(".liu_uu:last").append(liu_li);
+		    			
+		    			//创建勾选框
+		    			var liu_xuan="<input type='checkbox' class='liu_xuan'/>";
+		    			$(".liu_li:last").append(liu_xuan);
+		    			
+		    			//创建留言内容盒子
+		    			var liu_con="<span class='liu_con'></span>";
+		    			$(".liu_li:last").append(liu_con);
+		    			//创建留言内容
+		    			var liu_p="<span class='liu_p'>"+this.con+"</span>";
+		    			$(".liu_con:last").append(liu_p);
+		    			
+		    			//创建留言时间
+		    			var liu_time="<span class='liu_time'>"+this.time+"</span>";
+		    			$(".liu_con:last").append(liu_time);
+		    			
+		    			//创建 删除键
+		    			var liu_del="<a href='#' class='liu_del'>Delete</a>";
+		    			$(".liu_li:last").append(liu_del);
+		    			
+		    		
+		    			
+    				
+    					});
+    				
+    			}else{
+    				
+    			    var s1="<span id='s1'>No task to display.<a id='a1' herf='#'>Add one </a>?</span>"
+    			    $("#liuyan_box").append(s1);
+    			
+    			}
+    			
+    //---------留言板上的：删除键的点击事件----------------
+		    	$(document).on("click",".liu_del",function(){
+		    		
+		    				
+//		    				//从界面上删除留言条
+//		    				$(this).parent(".liu_li").css("background-color","palevioletred");
+		    				$(this).parent(".liu_li").remove();
+		    				
+//		    				//从本地存储上删除留言条
+		  				    var idx= $(this).parent(".liu_li").attr("idx");
+		  				    alert(idx);
+		  				    
+		  				    //从本地获取
+		    				var tmpArray = localStorage.getItem("liuyan");
+//		    			    //将字符串转换
+		    				tmpArray = eval("("+tmpArray+")");
+//		  				    
+		  				    tmpArray.splice(idx);
+//		  				    alert(tmpArray);
+//		  				  
+//		  				    //保存到本地
+		  				    tmpArray=JSON.stringify(tmpArray);
+		    				localStorage.setItem("liuyan",tmpArray);
+//		    				
+//		    				//如果留言条完全没有了，第一页显示初始化------
+							if($(".liu_li")==false){
+									  var s1="<span id='s1'>No task to display.<a id='a1' herf='#'>Add one </a>?</span>"
+	    			    			  $("#liuyan_box").append(s1);
+								}
+		    			   
+		    	});
+    	
+        //从第一页跳转到第二页------------------------------------------------------------
+        $("#a1").click(function(){
+        	
+        	$("#dv2_1").css("display","none");
+        	
+        	$("#dv2_2").css("display","block");
+        	
+        });
+    	
+    </script>
+</body>
+
+</html>

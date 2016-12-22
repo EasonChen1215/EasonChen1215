@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/练习2.css" />
+	</head>
+	<body>
+		<form oninput="c3_3.value=parseFloat(c3_1.value)*parseFloat(c3_2.value),c2_3.value=parseFloat(c2_1.value)*parseFloat(c2_2.value),c1_3.value=parseFloat(c1_1.value)*parseFloat(c1_2.value),c4_1.value=parseFloat(c3_3.value)+parseFloat(c2_3.value)+parseFloat(c1_3.value)">
+			<div id="box">
+			<header>
+				<h2>Order Form</h2>
+			</header>
+			<!-------------------------------------->
+			<div id="dv1">
+				<h4>Contant Detiles</h4>
+				<ul>
+					<li>Full Name</li>
+					<li>Postal Adress</li>
+				</ul>
+				<ul>
+				        <li>
+						<input type="" style=" background-color: #ffffe0;"/>
+						
+						</li>
+						<li>
+							<input type="text" placeholder="Address Line 1" />
+						</li>
+						<li>
+							<input type="text" placeholder="Address Line 2" />
+						</li>
+						<li>
+							<input type="text" placeholder="town/city" style="width: 66px;float: left;margin-right: 2px;"/>
+							<input type="text" placeholder="state" style="width: 30px;float: left;margin-right: 2px;"/>
+							<input type="text" placeholder="zip code" style="width: 66px;float: left;"/>
+						</li>
+						<li>
+						<select style="width: 160px;">
+							    <optgroup disabled="disabled">country</optgroup>
+								<option>china</option>
+								<option>corle</option>
+								<option>ehgland</option>
+								
+						</select>
+						</li> 
+				</ul>
+				<ul>
+					<li style="font-weight: 600;">Email Address</li>
+					<li>Home Phone no.</li>
+					<li>Cell Phone no.</li>
+					<li>Skype Name</li>
+					<li>Twitter</li>
+				</ul>
+				<ul>
+					<li> <input type="" style=" background-color: #ffffe0;"/>
+						 </li>
+					<li> <input type="" name="" id="" value="" /> </li>
+					<li> <input type="" name="" id="" value="" /> </li>
+					<li> <input type="" name="" id="" value="" /> </li>
+					<li> @<input style="width: 153px;float: right;"/> </li>
+					
+				</ul>
+			</div>
+			<!-------------------------------------->
+            <div id="dv2">
+            	    <h4>login Details</h4>
+					<ul>
+						<li style="padding-left: 10px;">Password</li>
+					</ul>
+					<ul >
+						<li>
+							<input type="password" />
+						</li>
+					</ul>
+					<ul>
+						<li style="padding-left: 10px;">Confirm<br />Password</li>
+					</ul>
+					<ul >
+						<li >
+							<input type="password" />
+						</li>
+					</ul>
+				
+            </div>			
+			<!-------------------------------------->
+           <div id="dv3">
+           	    <h4>order Details</h4>
+			    <table cellspacing="0px">
+						<thead>
+							<tr>
+								<td class="td1">&nbsp;Product Code</td>
+								<td class="td2">&nbsp;Description</td>
+								<td class="td3" style="text-align: center;">Qty</td>
+								<td class="td4" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price</td>
+								<td class="td5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="td1">&nbsp;COMP001</td>
+								<td class="td2">&nbsp;the ultimate smartphone</td>
+								<td class="td3">
+									<input type="text" value="7" id="c1_1" />
+								</td>
+								<td class="td4">
+									&nbsp;$<input value="399.99" id="c1_2" />
+								</td>
+								<td class="td5">
+						           <input style="float: right;" value="2799.93" id="c1_3"/>&nbsp;<span style="float: right;">$</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="td1">&nbsp;COMP002</td>
+								<td class="td2">&nbsp;the ultimate smartphone</td>
+								<td class="td3">
+									<input type="text" value="0" id="c2_1" />
+								</td>
+								<td class="td4">
+									&nbsp;$<input value="499.99" id="c2_2"/>
+								</td>
+								<td class="td5">
+									<input style="float: right;" value="0.00" id="c2_3"/>&nbsp;<span style="float: right;">$</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="td1">&nbsp;COMP003</td>
+								<td class="td2">&nbsp;the ultimate smartphone</td>
+								<td class="td3">
+									<input type="text" value="2" id="c3_1" />
+								</td>
+								<td class="td4">
+									&nbsp;$<input value="299.99" id="c3_2" />
+								</td>
+								<td class="td5">
+									<input style="float: right;" value="599.98" id="c3_3"/>&nbsp;<span style="float: right;">$</span>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr >
+								<td colspan="4" align="right" style="border-bottom: 0px;padding-right: 10px;">Order Total</td>
+								<td class="td5" style="border-bottom: 0px;">
+									<input style="background-color: transparent;float: right;" value="3399.91" id="c4_1"/>&nbsp;<span style="float: right;">$</span>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				
+           	
+           </div>
+			<!-------------------------------------->
+            <div id="dv4">
+			  <h4>payment Details</h4>
+			  <ul >
+				<li>name on card</li>
+				<li>expriy date</li>
+			  </ul>
+			  
+			  <ul >
+				<li>
+					<input type="text" />
+				</li>
+				<li>
+					<input type="text" style="width: 78px;"  value="2015年"/>
+				</li>
+			  </ul>
+			  
+              <ul>
+				<li>credit card no.</li>
+				<li>cvv2 no.</li>
+			  </ul>
+			  
+			  <ul>
+			   <li>
+					<input type="text" />
+				</li>
+				<li>
+					<input type="text" style="width: 50px;" />
+							(three digit code at back <br/>of card)
+				</li>
+			   </ul>
+			
+			</div>
+			<!-------------------------------------->
+           	<div id="dv5">
+           		<button>save order</button>
+			<button type="submit">submit order</button>
+			
+           	</div>
+           	
+           <!-------------------------------------->
+           
+			</div>
+		</form>
+	</body>
+	<script>
+		
+	</script>
+</html>

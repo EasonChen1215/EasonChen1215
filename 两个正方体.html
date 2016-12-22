@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				background-color: azure;
+				margin: 0px;
+				padding: 0px;
+				perspective: auto;
+			}
+			
+			#dv1,
+			#dv2 {
+				transform-style: preserve-3d;
+				width: 800px;
+				height: 800px;
+				position: absolute;
+				border: 2px solid black;
+				top: 150px;
+				left: 200px;
+				transform: rotate3d(1, 1, 1, 320deg);
+			}
+			
+			#dv1 {
+				animation: dv1Play 3s linear infinite;
+			}
+			
+			@keyframes dv1Play {
+				0% {
+					transform: rotate3d(0, 0, 0, 0deg);
+				}
+				100% {
+					transform: rotate3d(1, 1, 1, 360deg);
+				}
+			}
+			
+			#dv1>div,
+			#dv2>div {
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				left: 250px;
+				top: 250px;
+			}
+			
+			#dv1>div img,
+			#dv2>div img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#dv1>div:nth-of-type(1) {}
+			
+			#dv1>div:nth-of-type(2) {
+				transform: translateZ(300px);
+			}
+			
+			#dv1>div:nth-of-type(3) {
+				transform: rotateY(90deg) translateX(-150px) translateZ(150px);
+			}
+			
+			#dv1>div:nth-of-type(4) {
+				transform: rotateY(-90deg) translateX(150px) translateZ(150px);
+			}
+			
+			#dv1>div:nth-of-type(5) {
+				transform: rotateX(90deg) translateY(150px) translateZ(150px);
+			}
+			
+			#dv1>div:nth-of-type(6) {
+				transform: rotateX(-90deg) translateY(-150px) translateZ(150px);
+			}
+			
+			#dv2 {
+				animation: dv2Play 3s linear infinite;
+			}
+			
+			@keyframes dv2Play {
+				0% {
+					transform: rotate3d(0, 0, 0, 0deg);
+				}
+				100% {
+					transform: rotate3d(1, 1, 1, 360deg);
+				}
+			}
+			
+			#dv2>div:nth-of-type(1) {}
+			
+			#dv2>div:nth-of-type(2) {
+				transform: translateZ(300px);
+			}
+			
+			#dv2>div:nth-of-type(3) {
+				transform: rotateY(90deg) translateX(-150px) translateZ(150px);
+			}
+			
+			#dv2>div:nth-of-type(4) {
+				transform: rotateY(-90deg) translateX(150px) translateZ(150px);
+			}
+			
+			#dv2>div:nth-of-type(5) {
+				transform: rotateX(90deg) translateY(150px) translateZ(150px);
+			}
+			
+			#dv2>div:nth-of-type(6) {
+				transform: rotateX(-90deg) translateY(-150px) translateZ(150px);
+			}
+			
+			#dv2:hover>div:nth-of-type(1) {
+			transform: scale(1.5) translateZ(-100px);
+			}
+			
+			#dv2:hover>div:nth-of-type(2) {
+			transform: translateZ(550px)  scale(1.5);
+			}
+			
+			#dv2:hover>div:nth-of-type(3) {
+			transform: rotateY(90deg) translateX(-225px) translateZ(275px) translateY(-100px) scale(1.5);
+			
+			}
+			
+			#dv2:hover>div:nth-of-type(4) {
+			transform: rotateY(-90deg) translateX(225px) translateZ(275px) translateY(-100px) scale(1.5);
+			}
+			
+			#dv2:hover>div:nth-of-type(5) {
+			transform: rotateX(90deg) translateY(225px) translateZ(275px) translateY(-100px) scale(1.5);
+			}
+			
+			#dv2:hover>div:nth-of-type(6) {
+			transform: rotateX(-90deg) translateY(-225px) translateZ(275px) translateY(-100px) scale(1.5);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="dv1">
+			<div> <img src="img/7.JPG" /> </div>
+			<div> <img src="img/8.JPG" /> </div>
+			<div> <img src="img/9.JPG" /> </div>
+			<div> <img src="img/10.JPG" /> </div>
+			<div> <img src="img/11.JPG" /> </div>
+			<div> <img src="img/12.JPG" /> </div>
+		</div>
+		<div id="dv2">
+			<div> <img src="img/7.JPG" /> </div>
+			<div> <img src="img/8.JPG" /> </div>
+			<div> <img src="img/9.JPG" /> </div>
+			<div> <img src="img/10.JPG" /> </div>
+			<div> <img src="img/11.JPG" /> </div>
+			<div> <img src="img/12.JPG" /> </div>
+		</div>
+
+	</body>
+
+</html>

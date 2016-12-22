@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- SEO  -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- 苹果专用 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 简单移动端适配 -->
+   	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 图标 -->
+	<title>模板</title>
+    <style>
+    
+        *{
+         	margin: 0px;
+    		padding: 0px;
+    		border: 0px;
+    	    box-sizing: border-box;
+        }
+    	html,body{
+    		width: 100%;
+		    height: 100%;
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    display: flex;
+		    flex-flow: column nowrap;
+		    justify-content: flex-start;
+		    overflow: hidden;
+    		background-color: #EFEFEF;
+    		
+    	}
+    	/*头部*/
+    	header{
+    		text-align: center;
+    		line-height: 50px;
+    		width: 100%;
+    		height: 50px;
+    		color: white;
+    		background-color: #0f4a8d;
+    	    font-family: "微软雅黑";
+    	}
+    	/*主体部分*/
+    	#container{
+    		flex-grow: 1;
+    		width: 100%;
+    		background-color: #efefef;
+    		display: flex;
+		    flex-flow: column nowrap;
+		    justify-content: flex-start;
+		    overflow: hidden;
+    	}
+    	/*页面切换按钮部分*/
+    	#pageButton{
+    		 display: flex;
+    		 flex-flow: row nowrap;
+    		 height: 40px;
+    		 background-color: #444444;
+    	}
+    	ul{ 
+    		width: 100%;
+    		height: 100%;
+    		list-style: none;
+    		display: inline-flex;
+    		flex-flow: row nowrap;
+    		justify-content: space-around;
+    	    flex-grow: 1;
+    	    align-items: center;
+    	}
+    	ul li{
+    	    width: 25%;
+    	    height: 70%;	
+    	}
+    	ul li button{
+    		width: 100%;
+    		height: 100%;
+    		font-size: 17px;
+    		font-weight: bold;
+    		background-color: #020303;
+    		border-radius: 10px;
+    		color:white;
+    	}
+        /*page1*/
+        #page_1{
+        	width: 100%;
+        	display: flex;
+        	flex-flow: column nowrap;
+		    justify-content: flex-start;
+        	flex-grow: 1;
+            display: none;
+         }
+        #page_1>div:nth-child(1){
+           	width: 100%;
+           	height:40px;
+           	background-color: #999999;
+           	display: flex;
+           	justify-content: center;
+           	align-items: center;
+         }
+         #page_1 input{
+         	width: 96%;
+         	height: 80%;
+         	border-radius: 10px;
+         	font-size: 20px;
+         }
+         #no_content{
+         	width: 100%;
+         	height: 55px;
+         	background-color: white;
+         	display: inline-flex;
+         	flex-flow: row nowrap;
+            font-size: 19px;
+            font-weight: bold;
+            align-items: center;
+         }
+         #no_content span{
+         	margin-left: 5px;
+         }
+         
+        /*page2*/
+         #page_2{
+         	width: 100%;
+        	display: flex;
+		    flex-flow: column nowrap;
+		    justify-content: flex-start;
+		    overflow: hidden;
+            background-color: #efefef;
+            display: none;   
+         }
+         #page_2 div:nth-child(1){
+         	width: 100%;
+         	height: 130px;
+         	display: flex;
+         	flex-flow: column nowrap;
+         }
+         #page_2 div:nth-child(2){
+         	width: 100%;
+         	height: 85px;
+         	margin-top: 10px;
+         	display: flex;
+         	flex-flow: column nowrap;
+         }
+         #page_2 div:nth-child(3){
+         	width: 100%;
+         	height: 88px;
+         	flex-flow: column nowrap;
+		    margin-top: 20px;
+		    		 
+		 }
+         #page_2 div:nth-child(1) span{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            font-weight: 900;
+            display: block;
+            margin-left: 20px;
+            margin-top: 10px;
+         }
+         #page_2 div:nth-child(1) textarea{
+         	width: 90%;
+         	margin-left: 5%;
+         	margin-top: 5px;
+            height: 100px;
+         }
+          #page_2 div:nth-child(2) span{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            font-weight: 900;
+            display: block;
+            margin-left: 20px;
+            margin-top: 10px;
+         }
+         #page_2 div:nth-child(2) input{
+         	width: 90%;
+         	margin-left: 5%;
+         	height: 40px;
+         	font-size: 20px;
+         	margin-top: 5px;
+         }
+         #page_2 div:nth-child(3) button{
+         	width: 90%;
+         	margin-left: 5%;
+         	height: 40px;
+         	font-size: 20px;
+         	border-radius: 5px;
+         	background-color: #429027;
+         	font-family: "微软雅黑";
+         	font-weight: 900;
+         	color: white;
+         }
+        /*page3*/
+          #page_3{
+         	width: 100%;
+        	display: flex;
+		    flex-flow: column nowrap;
+		    justify-content: flex-start;
+		    overflow: hidden;
+            background-color: #efefef;
+         }
+         #page_3 div:nth-child(1){
+         	width: 100%;
+         	height: 130px;
+         	display: flex;
+         	flex-flow: column nowrap;
+         }
+         #page_3 div:nth-child(2){
+         	width: 100%;
+         	height: 85px;
+         	margin-top: 10px;
+         	display: flex;
+         	flex-flow: column nowrap;
+         }
+         #page_3 div:nth-child(3){
+         	width: 100%;
+         	height: 88px;
+         	flex-flow: column nowrap;
+		    margin-top: 20px;
+		    		 
+		 }
+         #page_3 div:nth-child(1) span{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            font-weight: 900;
+            display: block;
+            margin-left: 20px;
+            margin-top: 10px;
+         }
+         #page_3 div:nth-child(1) textarea{
+         	width: 90%;
+         	margin-left: 5%;
+         	margin-top: 5px;
+            height: 100px;
+         }
+          #page_3 div:nth-child(2) span{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            font-weight: 900;
+            display: block;
+            margin-left: 20px;
+            margin-top: 10px;
+         }
+         #page_3 div:nth-child(2) input{
+         	width: 90%;
+         	margin-left: 5%;
+         	height: 40px;
+         	font-size: 20px;
+         	margin-top: 5px;
+         }
+         #page_3 div:nth-child(3) button{
+         	width: 90%;
+         	margin-left: 5%;
+         	height: 40px;
+         	font-size: 20px;
+         	border-radius: 5px;
+         	background-color: #429027;
+         	font-family: "微软雅黑";
+         	font-weight: 900;
+         	color: white;
+         }
+    </style>
+</head>
+
+<body>
+	   <!--头部-->
+    <header>
+    	<h2>My Tasks</h2>
+    </header>
+       <!--主体部分-->
+    <section id="container">
+    	<!--切换页面按钮部分star-->
+    	<div id="pageButton">
+    		<ul>
+    			<li><button id="forPage_1">Task List</button></li>
+    			<li><button id="forPage_2">Add Task</button></li>
+    			<li><button id="forPage_3">Settings</button></li>
+    		</ul>
+    	</div>
+    	<!--切换页面按钮部分end-->
+    	
+    	<!--页面一star-->
+    	<div id="page_1">
+    		<div>
+    			<input type="search" name="" id="" value="" placeholder="  Search tasks..."/>
+    		</div>
+    		<div id="no_content">
+    			<span>No tasks to display.</span>
+    			<label for="forPage_2"><a style="text-decoration: underline;color: blue;">Add one</a></label>
+    		</div>
+    		
+    		
+    	</div>
+    	
+    	
+    	<!--页面二star-->
+    	<div id="page_2">
+    		
+    	<div>
+    	<span>Task Description</span>
+    	<textarea></textarea>
+    	</div>
+    	<div>
+    		<span>Due Date(MM/DD/YYYY)</span>
+    		<input type="date" />
+    	</div>
+    	
+    	<div>
+    	 <button type="submit">Add Task</button>	
+    	</div>	
+    		
+    		
+    		
+    	</div>
+    	
+    	
+    		
+    	<!--页面三star-->
+    	<div id="page_3">
+    		
+    	<div>
+    	<span>Task Description</span>
+    	<textarea></textarea>
+    	</div>
+    	<div>
+    		<span>Due Date(MM/DD/YYYY)</span>
+    		<input type="date" />
+    	</div>
+    	
+    	<div>
+    	 <button type="submit">Add Task</button>	
+    	</div>	
+    		
+    	</div>
+    	
+    </section>
+    <script>
+    	//获取对象
+    	var btForPage_1=document.getElementById("forPage_1");
+    	var btForPage_2=document.getElementById("forPage_2");
+    	var btForPage_3=document.getElementById("forPage_3");
+    	var page_1=document.getElementById("page_1");
+    	var page_2=document.getElementById("page_2");
+    	var page_3=document.getElementById("page_3");
+    	
+    	
+        //绑定事件
+        btForPage_1.onclick=function(){
+        	
+        }
+    	btForPage_2.onclick=function(){
+        
+    	}
+    	btForPage_3.onclick=function(){
+           
+        }
+    	
+    	
+    	
+    	
+    	
+    	
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #BEB0A3;
+			}
+			div img{
+				width: 100%;
+				height: 100%;
+			}
+			div{
+				position: relative;
+				transform: rotate(90deg);
+			}
+			div:nth-child(1){
+				width: 450px;
+				height: 250px;
+				transform: rotate(115deg);
+				top: 150px;
+			}
+			div:nth-child(2){
+				width: 450px;
+				height: 250px;
+				transform: rotate(85deg);
+				top: 100px;
+				left: 300px;
+			}
+			div:nth-child(3){
+				width: 450px;
+				height: 250px;
+				transform: rotate(95deg);
+				top: -100px;
+				left: 800px;
+			}
+			div:nth-child(4){
+				width: 450px;
+				height: 250px;
+				transform: rotate(70deg);
+				top: -200px;
+				left: 150px;
+			}
+			div:nth-child(5){
+				width: 450px;
+				height: 250px;
+				transform: rotate(125deg);
+				top: -800px;
+				left: 550px;
+			}
+			div:nth-child(6){
+				width: 450px;
+				height: 250px;
+				transform: rotate(75deg);
+				top: -1100px;
+				left: 1100px;
+			}
+			div:nth-child(1):hover{
+				transition: scale 1s;
+				transform: scale(1.5) rotate(115deg);
+			}
+			div:nth-child(2):hover{
+				transition: scale 1s;
+				transform: scale(1.5) rotate(85deg);
+			}
+			div:nth-child(3):hover{
+				transition: scale 1s;
+				transform: scale(1.5) rotate(95deg);
+			}
+			div:nth-child(4):hover{
+				transition: scale 1s;
+				transform: scale(1.5) rotate(70deg);
+			}
+			div:nth-child(5):hover{
+				transition: scale 1s;
+				transform: scale(1.5) rotate(125deg);
+			}
+			div:nth-child(6):hover{
+				transition: scale 1s;
+				transform: scale(1.5) rotate(75deg);
+			}
+			
+			/*@keyframes beBig{
+				from{transform: scale(1);
+				}
+				to{transform: scale(1.5);
+				}
+			}*/
+		</style>
+	</head>
+	<body>
+		<div> <img src="img/1.JPG"/> </div>
+		<div> <img src="img/2.JPG"/> </div>
+		<div> <img src="img/3.JPG"/> </div>
+		<div> <img src="img/4.JPG"/> </div>
+		<div> <img src="img/5.JPG"/> </div>
+		<div> <img src="img/6.JPG"/> </div>
+		
+	</body>
+</html>
